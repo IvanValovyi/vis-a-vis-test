@@ -22,7 +22,7 @@ const optionsList = [
 ];
 
 const optionsItem = (icon, text) => `
-	<svg class="logo text-main">
+	<svg>
 		<use xlink:href="./sprite.svg#${icon}"></use>
 	</svg>
 	<div class="progress">
@@ -65,10 +65,7 @@ export default function options() {
       if (isScrolledIntoView(optionsBlock)) {
         optionsBlock.querySelectorAll(".item").forEach((el) => {
           setTimeout(() => {
-            const progress = el.querySelector(".progress");
-
-            !progress.classList.contains("active") &&
-              progress.classList.add("active");
+            !el.classList.contains("active") && el.classList.add("active");
           }, animDuration);
           animDuration += 1000;
         });
