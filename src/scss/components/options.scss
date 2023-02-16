@@ -1,14 +1,126 @@
 @use "../core/variables.scss" as *;
 
-.options{
-	.label{
+.options {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 180px;
+
+	.line {
+		flex: auto;
+		height: 3px;
+		background: $borderGreyLight;
+	}
+
+	.label {
+		margin-bottom: 100px;
 		display: flex;
 		align-items: center;
-		.line{
+
+		.line {
 			margin-left: 25px;
-			flex: auto;
-			height: 3px;
-			background: $lightGrey;
+		}
+	}
+
+	.items {
+		margin-left: 130px;
+		display: flex;
+		align-items: center;
+
+		.item {
+			margin-right: 10px;
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+
+			svg {
+				width: 50px;
+				height: 50px;
+				margin-bottom: 30px;
+			}
+
+			.progress {
+				margin-bottom: 40px;
+				height: 20px;
+				display: flex;
+				align-items: center;
+
+				.point {
+					width: 10px;
+					height: 10px;
+					border: 2px solid $borderGreyDark;
+					border-radius: 100%;
+					position: relative;
+					transition: linear 0.3s;
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 0px;
+						height: 0px;
+						border-radius: 100%;
+						background: $darkBlue;
+						transition: linear 0.3s;
+					}
+				}
+
+				.track {
+					flex: auto;
+					height: 2px;
+					background: $borderGreyDark;
+					position: relative;
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 0;
+						width: 0%;
+						height: 100%;
+						transform: translateY(-50%);
+						background: $darkBlue;
+						transition: linear 0.7s 0.3s;
+					}
+				}
+
+				&.active {
+					.point {
+						width: 20px;
+						height: 20px;
+						border-color: $darkBlue;
+
+						&::before {
+							width: 10px;
+							height: 10px;
+						}
+					}
+
+					.track::before {
+						width: 100%;
+					}
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+
+				.progress .track {
+					display: none;
+				}
+			}
+		}
+
+		margin-bottom: 120px;
+	}
+
+	.button {
+		display: flex;
+		align-items: center;
+
+		.line {
+			margin-right: 25px;
 		}
 	}
 }

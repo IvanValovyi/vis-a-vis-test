@@ -75,14 +75,13 @@ export default function slider() {
       nextEl: ".swiper-next",
       prevEl: ".swiper-prev",
     },
-	 breakpoints:{
-		1220:{
-			slidesPerView: 2.1,
-		},
-		1700:{
-			slidesPerView: 3,
-		},
-	 }
+    breakpoints: {
+      1220: {
+        slidesPerView: 2.1,
+      },
+      1700: {
+        slidesPerView: 3,
+      },
+    },
   });
-  console.log(swiper);
 }

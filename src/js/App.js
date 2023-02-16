@@ -1,4 +1,5 @@
 import slider from "./slider.js";
+import options from "./options.js";
 
 new Vue({
   el: "#app",
@@ -9,5 +10,6 @@ new Vue({
   },
   mounted() {
     slider();
+    options();
   },
 });
