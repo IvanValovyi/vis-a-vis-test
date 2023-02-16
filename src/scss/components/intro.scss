@@ -9,9 +9,12 @@
 		padding-bottom: 76px;
 		margin-bottom: $containerSpace;
 
-		img {
+		.image{
 			width: calc(100% + $containerSpace);
-			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+			}
 		}
 
 		h1 {

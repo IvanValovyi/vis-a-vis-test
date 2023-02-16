@@ -1,0 +1,54 @@
+@use "../core/variables.scss" as *;
+
+footer {
+	display: flex;
+	background: #333333;
+	padding: 110px 0;
+
+	.social-media {
+		margin-right: 280px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.list {
+			display: flex;
+			align-items: center;
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 40px;
+				color: $white;
+				transition: 0.1s;
+				&:last-child{
+					margin-right: 0;
+				}
+				svg {
+					width: 30px;
+					height: 30px;
+					transition: 0.1s;
+				}
+				&:hover{
+					color: $darkBlue;
+				}
+				&:active{
+					opacity: 0.7;
+				}
+			}
+		}
+		@media (max-width: 1220px) {
+			margin-right: 80px;
+		}
+	}
+	.links{
+		flex: 1;
+		display: grid;
+		grid-template-columns: 1fr;
+		text-align: start;
+		gap: 36px;
+		a{
+			width: max-content;
+		}
+	}
+}
