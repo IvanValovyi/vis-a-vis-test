@@ -56,7 +56,7 @@ export default function slider() {
     document.querySelector("#swiper-wrapper").innerHTML += `
 	 <div class="swiper-slide">
 		<div class="label">
-			<div class="circle m"></div>
+			<div class="circle m gray"></div>
 			<span class="text-2xm font-normal leading-0_9 text-main">${el.label}</span>
 		</div>
 		<ul class="blue-dot-list">${items}</ul>

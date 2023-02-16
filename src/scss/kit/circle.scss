@@ -2,7 +2,6 @@
 
 .circle {
 	border-radius: 100%;
-	background: $lightGrey;
 
 	&.s {
 		min-width: 54px;
@@ -17,5 +16,13 @@
 	&.l {
 		min-width: 100px;
 		min-height: 100px;
+	}
+
+	&.gray {
+		background: $lightGrey;
+	}
+
+	&.blue {
+		background: $lightBlue;
 	}
 }
