@@ -1,0 +1,25 @@
+@use "../core/index.scss" as *;
+
+header {
+	padding: 15px 0;
+
+	&,
+	nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		width: 60px;
+		height: 60px;
+		margin-right: 40px;
+	}
+
+	nav a {
+		margin-left: 50px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

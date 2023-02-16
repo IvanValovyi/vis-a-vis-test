@@ -1,0 +1,30 @@
+@use "./core/index.scss" as *;
+
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+body,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	padding-left: $containerSpace;
+	padding-right: $containerSpace;
+}
+
+a {
+	text-decoration: none;
+}
+
+button, input{
+	outline: none;
+	border: none;
+}
+
+ul, li{
+	list-style: none;
+}

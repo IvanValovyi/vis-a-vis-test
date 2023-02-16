@@ -1,0 +1,32 @@
+@use "../../core/variables.scss" as *;
+
+.slider-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	background: $white;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
+	cursor: pointer;
+	transition: 0.3s;
+
+	svg {
+		width: 30px;
+		height: 30px;
+		color: $darkBlue;
+		transition: 0.3s;
+	}
+
+	&:hover {
+		background: $darkBlue;
+		svg {
+			color: $white;
+		}
+	}
+
+	&:active {
+		border-radius: 20px;
+	}
+}

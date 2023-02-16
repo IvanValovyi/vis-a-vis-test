@@ -1,0 +1,76 @@
+@use "../core/variables.scss" as *;
+
+.slider {
+	display: flex;
+	margin-bottom: 75px;
+
+	h2 {
+		margin-right: 25px;
+		margin-top: 70px;
+	}
+
+	.slider-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: calc(100% - $containerSpace * 2);
+		flex: auto;
+
+		.swiper {
+			user-select: none;
+			width: calc(100% - 120px);
+			padding: 0 30px;
+			padding-bottom: 64px;
+
+			.swiper-wrapper {
+				.swiper-slide {
+					display: flex;
+					flex-direction: column;
+					padding: 70px 40px;
+					padding-bottom: 85px;
+					background: $white;
+					border-radius: 20px;
+					box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.06);
+
+					.label {
+						display: flex;
+						align-items: center;
+						margin-bottom: 60px;
+
+						.circle {
+							margin-right: 20px;
+						}
+					}
+
+					ul {
+						li {
+							margin-bottom: 20px;
+
+							&:last-child {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.swiper-pagination {
+				bottom: 0;
+
+				.swiper-pagination-bullet {
+					width: 14px;
+					height: 14px;
+					border-radius: 100%;
+					margin: 0 15px;
+					background: $lightGrey;
+					opacity: 1;
+					transition: 0.3s;
+
+					&.swiper-pagination-bullet-active {
+						background: $darkGrey;
+					}
+				}
+			}
+		}
+	}
+}

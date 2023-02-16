@@ -1,0 +1,123 @@
+@use "../core/index.scss" as *;
+
+.intro {
+	margin-bottom: 240px;
+	background: $bgSecondary;
+
+	.baner {
+		position: relative;
+		padding-bottom: 76px;
+		margin-bottom: $containerSpace;
+
+		img {
+			width: calc(100% + $containerSpace);
+			height: 100%;
+		}
+
+		h1 {
+			position: absolute;
+			bottom: 0;
+			left: 8.5%;
+			opacity: 0.8;
+		}
+	}
+
+	.info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			width: 32%;
+
+			h2 {
+				margin-bottom: 20px;
+			}
+
+			p {
+				margin-bottom: 95px;
+			}
+		}
+
+		.right {
+			width: 57%;
+			display: flex;
+			align-items: center;
+
+			.list {
+				display: flex;
+				flex-direction: column;
+				width: 32%;
+				margin-right: auto;
+
+				.item {
+					display: flex;
+					align-items: center;
+					margin-bottom: 40px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					.circle {
+						margin-right: 36px;
+					}
+				}
+			}
+
+			.image {
+				width: 56%;
+				transform: translateY(60px);
+				position: relative;
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		@media (max-width: 1770px) {
+			padding-bottom: 30px;
+
+			.right {
+				.image {
+					width: 35%;
+					transform: translateY(0);
+				}
+
+				.list {
+					width: 50%;
+				}
+			}
+		}
+
+		@media (max-width: 1220px) {
+			flex-direction: column;
+
+			.left {
+				width: 100%;
+
+				p {
+					margin-bottom: 50px;
+				}
+			}
+
+			.right {
+				width: 100%;
+				flex-direction: column;
+				align-items: center;
+
+				.image {
+					width: 50%;
+				}
+
+				.list {
+					margin: 65px 0;
+					width: 100%;
+					align-items: flex-start;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@use "../core/variables.scss" as *;
+
+.number-list{
+	display: flex;
+	flex-direction: column;
+	margin: 0 130px;
+	margin-bottom: 120px;
+	.label{
+		display: flex;
+		align-items: center;
+		margin-bottom: 70px;
+		.line{
+			margin-left: 10px;
+			flex: auto;
+			height: 3px;
+			background: $darkBlue;
+		}
+	}
+	ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 35px;
+		column-gap: 70px;
+		li{
+			display: flex;
+			align-items: center;
+			.index{
+				margin-right: 30px;
+			}
+		}
+	}
+}

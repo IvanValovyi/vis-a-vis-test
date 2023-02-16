@@ -1,0 +1,33 @@
+@use "../core/index.scss" as *;
+
+.text-2xl {
+	@include adaptiv-font(82, 180);
+}
+
+.text-xl {
+	@include adaptiv-font(34, 50);
+}
+
+.text-l {
+	@include adaptiv-font(30, 40);
+}
+
+.text-ml {
+	@include adaptiv-font(24, 30);
+}
+
+.text-m {
+	@include adaptiv-font(18, 24);
+}
+
+.text-sm {
+	@include adaptiv-font(18, 20);
+}
+
+.text-s {
+	@include adaptiv-font(16, 18);
+}
+
+.text-xs {
+	font-size: 16px;
+}

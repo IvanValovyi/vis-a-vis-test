@@ -1,0 +1,21 @@
+@use "../core/variables.scss" as *;
+
+.circle {
+	border-radius: 100%;
+	background: $lightGrey;
+
+	&.s {
+		min-width: 54px;
+		min-height: 54px;
+	}
+
+	&.m {
+		min-width: 70px;
+		min-height: 70px;
+	}
+
+	&.l {
+		min-width: 100px;
+		min-height: 100px;
+	}
+}

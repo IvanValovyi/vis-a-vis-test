@@ -1,0 +1,26 @@
+.default-hovered-link {
+	position: relative;
+	opacity: 1;
+	transition: 0.2s;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 0%;
+		height: 1px;
+		background: currentColor;
+		transition: ease-in-out 0.3s;
+	}
+
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+}

@@ -1,0 +1,14 @@
+@use "../core/variables.scss" as *;
+
+.options{
+	.label{
+		display: flex;
+		align-items: center;
+		.line{
+			margin-left: 25px;
+			flex: auto;
+			height: 3px;
+			background: $lightGrey;
+		}
+	}
+}

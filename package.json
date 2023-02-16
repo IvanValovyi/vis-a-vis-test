@@ -1,0 +1,30 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+	"dev": "gulp",
+	"build": "gulp build",
+	"start": "gulp start"
+ },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.1",
+    "gulp-uglify": "^3.0.2",
+    "readable-stream": "^4.3.0",
+    "sass": "^1.58.1"
+  },
+  "devDependencies": {
+    "gulp-connect": "^5.7.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html": "^1.0.2"
+  }
+}

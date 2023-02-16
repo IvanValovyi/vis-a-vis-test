@@ -1,0 +1,33 @@
+@use "../../core/index.scss" as *;
+
+.blue-button {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 18px;
+	width: max-content;
+	border-radius: 10px;
+	background: $darkBlue;
+	color: $white;
+	transform: scale(1);
+	transition: ease-in-out 0.2s;
+	cursor: pointer;
+
+	&:hover {
+		background: $white;
+		color: $darkBlue;
+		outline: 1px solid $darkBlue;
+	}
+
+	&:active {
+		border-radius: 25px;
+		transform: scale(0.9);
+	}
+
+	&.button-size-l {
+		padding: 16px 95px;
+	}
+
+	&.button-size-m {
+		padding: 16px 60px;
+	}
+}

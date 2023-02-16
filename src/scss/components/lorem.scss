@@ -1,0 +1,15 @@
+@use "../core/variables.scss" as *;
+
+.lorem {
+	position: relative;
+	margin-bottom: 240px;
+	.background {
+		z-index: -1;
+		position: absolute;
+		top: 250px;
+		right: 0;
+		width: calc(100% - $containerSpace);
+		height: calc(100% - 250px);
+		background: $bgSecondary;
+	}
+}

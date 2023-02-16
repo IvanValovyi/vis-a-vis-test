@@ -1,0 +1,19 @@
+@use "../core/variables.scss" as *;
+
+.blue-dot-list{
+	li{
+		position: relative;
+		padding-left: 30px;
+		&::before{
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 8px;
+			height: 8px;
+			border-radius: 100%;
+			background: $darkBlue;
+		}
+	}
+}
