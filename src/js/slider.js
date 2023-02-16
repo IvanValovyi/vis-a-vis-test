@@ -49,7 +49,7 @@ export default function slider() {
 
     el.items.forEach((item) => {
       items += `
-		<li class="text-s font-light leading-1_4 text-main">${item}</li>
+		<li class="text-xs font-light leading-1_4 text-main">${item}</li>
 	`;
     });
 
@@ -57,7 +57,7 @@ export default function slider() {
 	 <div class="swiper-slide">
 		<div class="label">
 			<div class="circle m"></div>
-			<span class="text-l font-normal leading-0_9 text-main">${el.label}</span>
+			<span class="text-2xm font-normal leading-0_9 text-main">${el.label}</span>
 		</div>
 		<ul class="blue-dot-list">${items}</ul>
 	 </div>`;

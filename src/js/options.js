@@ -29,7 +29,7 @@ const optionsItem = (icon, text) => `
 		<div class="point"></div>
 		<div class="track"></div>
 	</div>
-	<p class="text-sm leading-1 font-bold text-main">
+	<p class="text-2xs leading-1 font-bold text-main">
 		${text}
 	</p>
 `;
@@ -49,6 +49,17 @@ function isScrolledIntoView(el) {
 export default function options() {
   const optionsBlock = document.querySelector("#option-items");
 
+  function runAnimation() {
+    if (isScrolledIntoView(optionsBlock)) {
+      optionsBlock.querySelectorAll(".item").forEach((el) => {
+        setTimeout(() => {
+          !el.classList.contains("active") && el.classList.add("active");
+        }, animDuration);
+        animDuration += 1000;
+      });
+    }
+  }
+
   optionsList.forEach((el, i) => {
     const item = document.createElement("div");
     item.classList.add("item");
@@ -62,18 +73,12 @@ export default function options() {
 
   window.addEventListener("scroll", () => {
     if (debounce_timer) {
-      if (isScrolledIntoView(optionsBlock)) {
-        optionsBlock.querySelectorAll(".item").forEach((el) => {
-          setTimeout(() => {
-            !el.classList.contains("active") && el.classList.add("active");
-          }, animDuration);
-          animDuration += 1000;
-        });
-      }
-
       debounce_timer = false;
+      runAnimation();
+
       setTimeout(() => {
         debounce_timer = true;
+        runAnimation();
       }, 200);
     }
   });

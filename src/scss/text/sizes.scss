@@ -12,7 +12,11 @@
 	@include adaptiv-font(30, 40);
 }
 
-.text-ml {
+.text-2xm {
+	@include adaptiv-font(30, 36);
+}
+
+.text-xm {
 	@include adaptiv-font(24, 30);
 }
 
@@ -20,14 +24,14 @@
 	@include adaptiv-font(18, 24);
 }
 
-.text-sm {
+.text-2xs {
 	@include adaptiv-font(18, 20);
 }
 
-.text-s {
+.text-xs {
 	@include adaptiv-font(16, 18);
 }
 
-.text-xs {
+.text-s {
 	font-size: 16px;
 }
