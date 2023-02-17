@@ -83,7 +83,7 @@
 						height: 100%;
 						transform: translateY(-50%);
 						background: $darkBlue;
-						transition: linear 0.7s 0.3s;
+						transition: linear 1s;
 					}
 				}
 			}
@@ -97,11 +97,17 @@
 			}
 
 			&.active {
-				svg{
-					color: $darkBlue
-				}
 				.progress{
-					.point {
+					.track::before {
+						width: 100%;
+					}
+				}
+				cursor: pointer;
+				&:hover{
+					svg{
+						color: $darkBlue
+					}
+					.progress .point {
 						width: 20px;
 						height: 20px;
 						border-color: $darkBlue;
@@ -111,9 +117,15 @@
 							height: 10px;
 						}
 					}
-	
-					.track::before {
-						width: 100%;
+				}
+				&:active{
+					svg{
+						transition: linear 0.1s;
+						transform: scale(0.8);
+					}
+					.progress .point::before {
+						transition: linear 0.1s;
+						transform: translate(-50%, -50%) scale(0.7);
 					}
 				}
 			}

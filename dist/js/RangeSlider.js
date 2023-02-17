@@ -1,1 +1,0 @@
-export const RangeSlider=Vue.component("range-slider",{data:()=>({slider:"12"}),template:'\n  <div>\n   \t<custom-slider min="10" max="50" step="2" raising v-model="slider" />\n    {{ slider }}\n  </div>\n\t '});
