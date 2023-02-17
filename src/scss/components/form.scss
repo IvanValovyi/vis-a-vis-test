@@ -37,6 +37,7 @@
 			.bottom {
 				grid-area: bottom;
 				display: flex;
+				align-items: center;
 				justify-content: space-between;
 
 				.checkbox {
@@ -107,6 +108,19 @@
 			p {
 				margin-top: 65px;
 				max-width: 360px;
+			}
+		}
+		@media (max-width: 1220px) {
+			flex-direction: column;
+			form{
+				width: 100%;
+				margin-bottom: 130px;
+			}
+			.info{
+				margin-left: 0;
+				p{
+					max-width: none;
+				}
 			}
 		}
 	}
