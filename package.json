@@ -18,8 +18,7 @@
     "gulp-svg-sprite": "^2.0.1",
     "gulp-uglify": "^3.0.2",
     "readable-stream": "^4.3.0",
-    "sass": "^1.58.1",
-    "vue-custom-range-slider": "^0.2.3"
+    "sass": "^1.58.1"
   },
   "devDependencies": {
     "gulp-connect": "^5.7.0",
