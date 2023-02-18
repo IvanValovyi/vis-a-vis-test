@@ -34,6 +34,11 @@
 				grid-area: input-email;
 			}
 
+			.input-range {
+				grid-area: input-range;
+				margin-top: 50px;
+			}
+
 			.bottom {
 				grid-area: bottom;
 				display: flex;
@@ -82,11 +87,13 @@
 					}
 				}
 			}
-			.error{
+
+			.error {
 				padding-top: 10px;
 				color: $borderGreyDark;
 				font-size: 12px;
-				&::before{
+
+				&::before {
 					content: "* ";
 					color: $darkBlue;
 				}
@@ -110,15 +117,19 @@
 				max-width: 360px;
 			}
 		}
+
 		@media (max-width: 1220px) {
 			flex-direction: column;
-			form{
+
+			form {
 				width: 100%;
 				margin-bottom: 130px;
 			}
-			.info{
+
+			.info {
 				margin-left: 0;
-				p{
+
+				p {
 					max-width: none;
 				}
 			}

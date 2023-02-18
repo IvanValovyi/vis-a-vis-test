@@ -1,0 +1,55 @@
+@use "../core/variables.scss" as *;
+
+.vue-range-slider {
+	.slider-dot {
+		width: 10px !important;
+		height: 20px !important;
+		border-radius: 20px !important;
+		box-shadow: none !important;
+		background: $darkBlue !important;
+		top: -8px !important;
+
+		.tooltip {
+			padding: 10px 18px;
+			border-radius: 20px;
+			border: 1px solid $darkBlue;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: max-content;
+		}
+	}
+
+	.slider-process {
+
+		&,
+		* {
+			display: none !important;
+		}
+	}
+
+	.slider-piecewise {
+		.piecewise-item {
+			.piecewise {
+				top: -3px !important;
+				width: 4px;
+				height: 10px;
+				border-radius: 20px;
+				background: $borderGreyDark;
+				position: relative;
+
+				.label {
+					position: absolute;
+					left: 50%;
+					transform: translate(-50%, 24px);
+					width: max-content;
+					color: $borderGreyDark;
+				}
+			}
+		}
+	}
+
+	.slider::after {
+		background: $borderGreyDark;
+	}
+}

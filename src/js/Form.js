@@ -85,6 +85,11 @@ export default Vue.component("vue-form", {
 		</div>
 		<p class="error text-main" v-if="(errors.email && showErrors)">Incorrect e-mail address format, please enter a valid e-mail address (for example: "email@test.com").</p>
 	</div>
+
+	<div class="input-range">
+		<range-slider></range-slider>
+	</div>
+
 	<div class="bottom">
 		<div class="checkbox">
 			<div class="input">
