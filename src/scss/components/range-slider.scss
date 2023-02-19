@@ -1,55 +1,56 @@
 @use "../core/variables.scss" as *;
 
-.vue-range-slider {
+.vue-slider {
+	margin: 50px 0;
+
+	// Стилі крапки на range
 	.slider-dot {
-		width: 10px !important;
-		height: 20px !important;
-		border-radius: 20px !important;
-		box-shadow: none !important;
-		background: $darkBlue !important;
-		top: -8px !important;
+		cursor: pointer;
+		width: 10px;
+		height: 20px;
+		border-radius: 20px;
+		box-shadow: none;
+		background: $darkBlue;
+		transform: translateY(-3px);
+	}
 
-		.tooltip {
-			padding: 10px 18px;
-			border-radius: 20px;
-			border: 1px solid $darkBlue;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: max-content;
+	// Стилі підказки на range
+	.tooltip {
+		cursor: pointer;
+		padding: 10px 18px;
+		border-radius: 20px;
+		border: 1px solid $darkBlue;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: max-content;
+		transition: 0.1s;
+
+		&:active {
+			transform: scale(0.9);
 		}
 	}
 
-	.slider-process {
-
-		&,
-		* {
-			display: none !important;
-		}
-	}
-
-	.slider-piecewise {
-		.piecewise-item {
-			.piecewise {
-				top: -3px !important;
-				width: 4px;
-				height: 10px;
-				border-radius: 20px;
-				background: $borderGreyDark;
-				position: relative;
-
-				.label {
-					position: absolute;
-					left: 50%;
-					transform: translate(-50%, 24px);
-					width: max-content;
-					color: $borderGreyDark;
-				}
-			}
-		}
-	}
-
-	.slider::after {
+	// Стилі вертикальної мітки на range
+	.step {
+		transform: translateY(-3px);
+		width: 4px;
+		height: 10px;
+		border-radius: 20px;
 		background: $borderGreyDark;
+	}
+
+	// Стилі підпису мітки на range
+	.label {
+		margin-top: 15px;
+		transform: translateX(-50%);
+		width: max-content;
+		color: $borderGreyDark;
+	}
+
+	// Приховуємо всі непотрібні блоки, які йдуть за дефолтом
+	.vue-slider-mark-label,
+	.vue-slider-mark-step {
+		display: none;
 	}
 }

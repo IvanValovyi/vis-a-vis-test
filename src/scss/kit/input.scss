@@ -11,7 +11,7 @@
 		width: 100%;
 
 		&:focus,
-		&.valid {
+		&.has-content {
 			~.label {
 				top: 0%;
 				transform: translateY(-100%);

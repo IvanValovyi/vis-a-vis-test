@@ -12,31 +12,35 @@
 		form {
 			width: 750px;
 			height: max-content;
-			display: grid;
-			grid-template-areas: "title ." "input-name input-name" "input-phone input-email" "input-range input-range" "bottom bottom";
-			grid-template-columns: 1fr 1fr;
-			row-gap: 40px;
-			column-gap: 30px;
 
 			h3 {
-				grid-area: title;
+				width: 50%;
 			}
 
-			.input-name {
-				grid-area: input-name;
-			}
+			.inputs {
+				margin-top: 40px;
+				display: grid;
+				grid-template-areas: "input-name input-name" "input-phone input-email";
+				grid-template-columns: 1fr 1fr;
+				row-gap: 40px;
+				column-gap: 30px;
 
-			.input-phone {
-				grid-area: input-phone;
-			}
+				.input-name {
+					grid-area: input-name;
+				}
 
-			.input-email {
-				grid-area: input-email;
+				.input-phone {
+					grid-area: input-phone;
+				}
+
+				.input-email {
+					grid-area: input-email;
+				}
 			}
 
 			.input-range {
+				padding: 40px 0;
 				grid-area: input-range;
-				margin-top: 50px;
 			}
 
 			.bottom {
@@ -92,6 +96,11 @@
 				padding-top: 10px;
 				color: $borderGreyDark;
 				font-size: 12px;
+				display: none;
+
+				&.visible {
+					display: block;
+				}
 
 				&::before {
 					content: "* ";

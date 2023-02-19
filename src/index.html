@@ -13,8 +13,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/vue-slider-component/theme/default.min.css"
       rel="stylesheet"
-      href="https://unpkg.com/vue-range-component@1.0.3/dist/vue-range-slider.min.css"
     />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8" />
@@ -251,8 +251,35 @@
         <h2 class="text-xl font-bold leading-1_1 text-main">
           Lorem Ipsum<br />is simply dummy text
         </h2>
-        <div class="content">
-          <vue-form></vue-form>
+        <div id="form" class="content">
+          <form>
+            <h3 class="text-xm text-main font-bold leading-1">
+              It is a long established fact that a reader
+            </h3>
+				
+            <div class="inputs">
+					<!-- Сюди рендеряться всі поля для вводу -->
+				</div>
+
+            <div class="input-range">
+              <range-slider></range-slider>
+            </div>
+
+            <div class="bottom">
+              <div id="check-input" class="checkbox">
+                <div class="input">
+                  <input id="check" type="checkbox" />
+                  <label for="check" class="text-s text-main font-normal leading-1_1"
+                    >Lorem Ipsum is simply dummy text</label
+                  >
+                </div>
+                <p class="error text-main">
+                  Agree to the privacy policy, it is mandatory.
+                </p>
+              </div>
+              <button class="blue-button button-size-m">Lorem Ipsum</button>
+            </div>
+          </form>
           <div class="info">
             <h3 class="text-xm text-main font-bold leading-1">
               It is a long established<br />fact that a reader
