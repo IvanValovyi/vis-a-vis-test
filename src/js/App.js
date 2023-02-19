@@ -2,7 +2,7 @@ import slider from "./slider.js";
 import options from "./options.js";
 import ItemList from "./ItemList.js";
 import Item from "./Item.js";
-import form from "./form.js";
+import form from "./form-validation.js";
 import RangeSlider from "./RangeSlider.js";
 
 new Vue({
