@@ -4,13 +4,13 @@ function validName(name) {
 }
 // Функція валідації електронної пошти
 function validEmail(email) {
-  var re =
+  const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
 // Функція валідації номеру телефону
 function validPhoneNumber(input_str) {
-  var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+  const re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
 
   return re.test(input_str);
 }
@@ -54,7 +54,7 @@ const formInputs = [
 // Масив помилок форми
 const formErrors = [];
 
-// Функція валідації полів для вводу (використовуємо для Name, Phone і E-mail)
+// Функція перевірки на валідність полів для вводу (використовуємо для Name, Phone і E-mail)
 function checkIsValidInput(inputBlock, el) {
   const input = inputBlock.querySelector("input");
   const errorBlock = inputBlock.querySelector(".error");
@@ -64,7 +64,7 @@ function checkIsValidInput(inputBlock, el) {
 
   //   Якщо інпут не порожній
   if (el.value) {
-    // Додаємо клас .has-content - це потрібно для фіксування лейбла зверху
+    // Додаємо клас .has-content (це потрібно для фіксування лейбла зверху)
     !inputHasContent && input.classList.add("has-content");
   } else {
     inputHasContent && input.classList.remove("has-content");
@@ -89,6 +89,17 @@ function checkIsValidInput(inputBlock, el) {
   return true;
 }
 
+// HTML структура блоку інпута
+const renderInputBlock = (el) => `
+	<div class="input-default ${el.isRequired ? "required" : ""}">
+		<input id="${el.id}" type="${el.type}" />
+		<label for="${el.id}" class="label">${el.label}</label>
+		<div class="line"></div>
+	</div>
+
+	<p class="error text-main">${el.errorText}</p>
+`;
+
 export default function form() {
   const form = document.querySelector("#form");
   const forminputsBlock = form.querySelector(".inputs");
@@ -100,15 +111,7 @@ export default function form() {
     inputBlock.className = el.className;
 
     //  Заповнюємо блок інпута контентом
-    inputBlock.innerHTML += `
-		<div class="input-default ${el.isRequired ? "required" : ""}">
-			<input id="${el.id}" type="${el.type}" />
-			<label for="${el.id}" class="label">${el.label}</label>
-			<div class="line"></div>
-		</div>
-
-		<p class="error text-main">${el.errorText}</p>
-	`;
+    inputBlock.innerHTML += renderInputBlock(el);
 
     // Обробляємо подію введення контенту в інпут
     inputBlock.querySelector("input").addEventListener("input", (e) => {

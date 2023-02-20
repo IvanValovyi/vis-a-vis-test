@@ -1,4 +1,4 @@
-@use "../core/index.scss" as *;
+@use "../core/mixin.scss" as *;
 
 .text-2xl {
 	@include adaptiv-font(82, 180);

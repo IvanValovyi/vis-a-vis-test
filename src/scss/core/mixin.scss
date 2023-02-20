@@ -1,5 +1,6 @@
 @use "./variables.scss" as *;
 
+// Міксин адаптивного тексту (першом параметром приймає мінімальний розмір тексту другим - максимальний)
 @mixin adaptiv-font($mobSize, $pcSize) {
 	$addSize: $pcSize - $mobSize;
 	$maxWidthLocal: $maxWidth - $minWidth;

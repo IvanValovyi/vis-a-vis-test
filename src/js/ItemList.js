@@ -47,17 +47,19 @@ const itemsList = [
   },
 ];
 
+// Функція рандомізації масиву
 function shuffle(array) {
   let currentIndex = array.length;
   let randomIndex;
 
-  // While there remain elements to shuffle.
+  // Перебираємо масив поки currentIndex != 0
   while (currentIndex != 0) {
-    // Pick a remaining element.
+    // Створюємо рандомний індекс.
     randomIndex = Math.floor(Math.random() * currentIndex);
+
     currentIndex--;
 
-    // And swap it with the current element.
+    // Міняємо місцями елемент з індексом currentIndex і елемент з індексом randomIndex
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex],
       array[currentIndex],
@@ -70,6 +72,7 @@ function shuffle(array) {
 export default Vue.component("vue-item-list", {
   data() {
     return {
+      // Створюємо рандомізований масив itemsList
       itemsList: shuffle(itemsList),
     };
   },

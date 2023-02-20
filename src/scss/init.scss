@@ -1,4 +1,4 @@
-@use "./core/index.scss" as *;
+@use "./core/variables.scss" as *;
 
 html {
 	font-family: 'Roboto', sans-serif;
@@ -20,11 +20,13 @@ a {
 	text-decoration: none;
 }
 
-button, input{
+button,
+input {
 	outline: none;
 	border: none;
 }
 
-ul, li{
+ul,
+li {
 	list-style: none;
 }
